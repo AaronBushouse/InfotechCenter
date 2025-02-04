@@ -1,29 +1,34 @@
-# Importing required libraries
-import sys  # For controlling the output stream (such as writing to the console)
+# Import required libraries
+import sys  # For controlling the output stream (writing to the console)
 import time  # For adding delays (e.g., time.sleep())
 
-# Print initial welcome message with developer info
-print("Welcome Branch - Developer: Aaron Bushouse")
+# ANSI escape sequences for text colors
+RED = "\033[91m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+BLUE = "\033[94m"
+CYAN = "\033[96m"
+RESET = "\033[0m"  # Resets text to default color
 
-# Print version information for the system
-print("\nWelcome to InfoTechCenter V1.0")
+# Display initial welcome message with developer information
+print(f"{GREEN}Welcome Branch - Developer: Aaron Bushouse{RESET}")
 
-# Initialize variables
-x = 0  # Counter for the while loop
-ellipsis = 0  # Counter for the number of dots in the message
+# Display system version information
+print(f"\n{CYAN}Welcome to InfoTechCenter V1.0{RESET}")
 
-# Loop that runs until 'x' reaches 20
-while x != 20:
-    x += 1  # Increment the counter 'x' by 1 each time
-    message = ("Infotech Center System Booting" + "." * ellipsis)  # Create a message with dots increasing each loop
-    ellipsis += 1  # Increase the number of dots (ellipsis) each time
-    sys.stdout.write("\r" + message)  # Write the message to the same line of the console, overwriting the previous one
-    time.sleep(.55)  # Pause for 0.55 seconds between each update of the message
-    
-    # Reset ellipsis to 0 after 4 dots to keep the message clean
-    if ellipsis == 4:
-        ellipsis = 0
-    
-    # Once 'x' reaches 20, print a final message indicating the system has booted up
-    if x == 20:
-        print("\n\nOperating System Booting up - Retina Scanned - Access Granted")
+# Initialize counters
+x = 0  # Controls the number of iterations for the boot-up animation
+ellipsis = 0  # Determines the number of dots displayed in the boot-up message
+
+# Loop to simulate system boot-up progress
+while x < 20:
+    x += 1  # Increment iteration counter
+    message = f"{YELLOW}Infotech Center System Booting{'.' * ellipsis}{RESET}"  # Yellow text for boot-up message
+    ellipsis = (ellipsis + 1) % 4  # Cycle through 0 to 3 dots for a smooth animation effect
+
+    sys.stdout.write("\r" + message)  # Overwrite previous output in the console for a dynamic effect
+    sys.stdout.flush()  # Ensure immediate display of the message
+    time.sleep(0.55)  # Pause for 0.55 seconds before the next update
+
+# Display final message after the boot-up sequence completes
+print(f"\n\n{BLUE}Operating System Booting up - Retina Scanned - Access Granted{RESET}")
