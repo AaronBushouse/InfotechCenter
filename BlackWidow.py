@@ -18,5 +18,8 @@ def vehicleResponseSystem():
     if weatherAlert == "snowing":
         print("\n\nThe National Weather Service has updated our alarm by 30 minutes because"
               " it is", weatherAlert,"\n\n")
-        
+    elif weatherAlert == "blizzard":
+        print("\n\nThe National Weather Service has updated our alarm by 60 minutes because"
+              " it is a", weatherAlert,"!\n\n")
+    
 vehicleResponseSystem()
