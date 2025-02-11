@@ -22,32 +22,32 @@ def vehicleResponseSystem():
     # Check the weather condition and update the alarm accordingly
     if weatherAlert == "snowing":
         print("\nThe National Weather Service has updated our alarm by 30 minutes because"
-              " it is", weatherAlert,"\n\n")
+              " it is", weatherAlert,)
         sleep(1)
         print("VRS has been engaged allowing us to only drive 55MPH")
     elif weatherAlert == "blizzard":
         print("\nThe National Weather Service has updated our alarm by 60 minutes because"
-              " it is a", weatherAlert,"!\n\n")
+              " it is a", weatherAlert,"!")
         sleep(1)
         print("VRS has been engaged allowing us to only drive 25MPH")
     elif weatherAlert == "icy":
         print("\nThe National Weather Service has updated our alarm by 90 minutes because"
-              " it is a", weatherAlert,"drive safe!\n\n")
+              " it is", weatherAlert,", drive safe!")
         sleep(1)
         print("VRS has been engaged allowing us to only drive 25MPH")
     elif weatherAlert == "rainy":
         print("\nThe National Weather Service has updated our alarm by 10 minutes because"
-              " it is a", weatherAlert,", possible low visibility\n\n")
+              " it is a", weatherAlert,", possible low visibility")
         sleep(1)
         print("VRS has been engaged allowing us to only drive 45MPH")
     elif weatherAlert == "windy":
         print("\nThe National Weather Service has updated our alarm by 5 minutes because"
-              " it is a", weatherAlert,"\n\n")
+              " it is a", weatherAlert,)
         sleep(1)
         print("VRS has been engaged allowing us to only drive 75MPH")
     else:
         # Default message for sunny weather
-        print("\nThe National Weather Service is calling for",weatherAlert,"skies! Enjoy it!\n\n")
+        print("\nThe National Weather Service is calling for",weatherAlert,"skies! Enjoy it!")
         sleep(1)
         print("VRS has been disengaged drive safely")
 
