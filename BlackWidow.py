@@ -1,6 +1,6 @@
 # Print a header to introduce the program
 print("\n******************************************\n")
-print("Weather Branch - Developer: Aaron Bushouse\n\n\n")
+print("Weather Branch - Developer: Aaron Bushouse")
 
 # Import necessary libraries
 import random  # For selecting a random weather condition
@@ -21,23 +21,35 @@ weatherAlert = weather()
 def vehicleResponseSystem():
     # Check the weather condition and update the alarm accordingly
     if weatherAlert == "snowing":
-        print("\n\nThe National Weather Service has updated our alarm by 30 minutes because"
+        print("\nThe National Weather Service has updated our alarm by 30 minutes because"
               " it is", weatherAlert,"\n\n")
+        sleep(1)
+        print("VRS has been engaged allowing us to only drive 55MPH")
     elif weatherAlert == "blizzard":
-        print("\n\nThe National Weather Service has updated our alarm by 60 minutes because"
+        print("\nThe National Weather Service has updated our alarm by 60 minutes because"
               " it is a", weatherAlert,"!\n\n")
+        sleep(1)
+        print("VRS has been engaged allowing us to only drive 25MPH")
     elif weatherAlert == "icy":
-        print("\n\nThe National Weather Service has updated our alarm by 90 minutes because"
+        print("\nThe National Weather Service has updated our alarm by 90 minutes because"
               " it is a", weatherAlert,"drive safe!\n\n")
+        sleep(1)
+        print("VRS has been engaged allowing us to only drive 25MPH")
     elif weatherAlert == "rainy":
-        print("\n\nThe National Weather Service has updated our alarm by 10 minutes because"
-              " it is a", weatherAlert,", possible low visibility\n\n") 
+        print("\nThe National Weather Service has updated our alarm by 10 minutes because"
+              " it is a", weatherAlert,", possible low visibility\n\n")
+        sleep(1)
+        print("VRS has been engaged allowing us to only drive 45MPH")
     elif weatherAlert == "windy":
-        print("\n\nThe National Weather Service has updated our alarm by 5 minutes because"
+        print("\nThe National Weather Service has updated our alarm by 5 minutes because"
               " it is a", weatherAlert,"\n\n")
+        sleep(1)
+        print("VRS has been engaged allowing us to only drive 75MPH")
     else:
         # Default message for sunny weather
         print("\nThe National Weather Service is calling for",weatherAlert,"skies! Enjoy it!\n\n")
+        sleep(1)
+        print("VRS has been disengaged drive safely")
 
 # Call the function to display the response based on the generated weather
 vehicleResponseSystem()
