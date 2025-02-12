@@ -22,7 +22,7 @@ def vehicleResponseSystem(weather_condition):
         delay, speed = response_data[weather_condition]
         print(f"\nThe National Weather Service has updated our alarm by {delay} minutes because it is {weather_condition}.")
         sleep(1)
-        print(f"VRS has been engaged allowing us to only drive {speed}MPH.")
+        print(f"VRS has been engaged allowing us to only drive a maximum of {speed}MPH.")
     else:
         print(f"\nThe National Weather Service is calling for {weather_condition} skies! Enjoy it!")
         sleep(1)
