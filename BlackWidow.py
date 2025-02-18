@@ -16,7 +16,7 @@ def gas_level_alert():
     
     # Define distance ranges based on gas level
     distance_ranges = {
-        "Empty": (0.1, 100),
+        "Empty": (0.1, 5),
         "Low": (0.1, 25),
         "Quarter Tank": (25.001, 50)
     }
